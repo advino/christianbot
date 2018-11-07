@@ -15,7 +15,7 @@ const loadText = (url) => {
   return text;
 }
 
-let text = loadText('/scripts/corpus.txt');
+let text = loadText('scripts/corpus.txt');
 const christianBot = new markovBot(1 , 500);
 window.onload = () => {
   christianBot.feed(text);
