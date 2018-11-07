@@ -18,16 +18,19 @@ const loadText = (url) => {
 
 // let text = loadText('scripts/corpus.txt');
 let text = finalCorpus;
+const speaker = new p5.Speech();
 const christianBot = new markovBot(1 , 500);
 window.onload = () => {
   christianBot.feed(text);
-  document.querySelector('h2').innerHTML = christianBot.generate();
+  let genisisText = christianBot.generate();
+  document.querySelector('h2').innerHTML = genisisText;
 }
 
 const createPoem = poemSize => {
   const christianBot = new markovBot(1, poemSize);
   christianBot.feed(text);
-  document.querySelector('h2').innerHTML = christianBot.generate();
+  let generatedText = christianBot.generate();
+  document.querySelector('h2').innerHTML = generatedText;
 }
 
 let button = document.querySelector('button');
