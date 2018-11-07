@@ -24,6 +24,7 @@ window.onload = () => {
   christianBot.feed(text);
   let genisisText = christianBot.generate();
   document.querySelector('h2').innerHTML = genisisText;
+  speaker.speak(genisisText);
 }
 
 const createPoem = poemSize => {
@@ -31,6 +32,7 @@ const createPoem = poemSize => {
   christianBot.feed(text);
   let generatedText = christianBot.generate();
   document.querySelector('h2').innerHTML = generatedText;
+  speaker.speak(generatedText);
 }
 
 let button = document.querySelector('button');
