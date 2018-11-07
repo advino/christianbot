@@ -1,4 +1,5 @@
 import markovBot from './markov.js';
+import finalCorpus from './corpus.js';
 
 const loadText = (url) => {
   const xhr = new XMLHttpRequest();
@@ -15,7 +16,8 @@ const loadText = (url) => {
   return text;
 }
 
-let text = loadText('scripts/corpus.txt');
+// let text = loadText('scripts/corpus.txt');
+let text = finalCorpus;
 const christianBot = new markovBot(1 , 500);
 window.onload = () => {
   christianBot.feed(text);
