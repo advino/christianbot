@@ -1,3 +1,5 @@
+//Thanks to Alison Parrish (orginal code) and Dan Shiffman (tutorials) for the virtual guidance! 
+
 String.prototype.tokenize = function() {
   return this.split(' ');
 }
@@ -17,14 +19,6 @@ class markovBot {
 
   feed(text) {
     let tokens = text.tokenize();
-    // let possibleBegin = text.split('\n');
-    // for(let i = 0; i < possibleBegin.length; i++) {
-    //   let possible = possibleBegin[i].split(' ');
-    //   let beginning = possible.slice(0, this.n);
-    //   this.beginnings.push(beginning);
-    // }
-    //
-    // console.log(this.beginnings);
 
     if (tokens.length < this.n) {
       return false;
@@ -49,7 +43,6 @@ class markovBot {
 
     }
 
-    // console.log(this.ngrams);
   }
 
   generate() {
